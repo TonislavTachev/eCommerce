@@ -15,7 +15,7 @@ const Cart = () => {
 
     return (
       <Container>
-        <div style={{background:'red', padding:10, marginTop:20, color:'white', width:'100%'}}>
+        <div style={{background:'#dc3545', padding:10, marginTop:20, color:'white', width:'100%'}}>
             <h5>My orders</h5>
         </div>
         <Row style={{marginTop:20, padding:10, border:'1px solid grey'}}>
