@@ -7,7 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 <h1>How to start the node server</h1>
 <code>cd into src/ then into /server</code> and run the following command <code>npm run server</code>
 
-<h1><b>Start both the react and node scripts in separate terminal</b></h1>
+<h1><b>Start both the react and node scripts in separate terminals</b></h1>
 
 ## Available Scripts
 
