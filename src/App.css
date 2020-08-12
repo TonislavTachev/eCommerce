@@ -28,11 +28,25 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+/* Custom styling of navBar*/
+.navbar{
+  background-color: #fff;
+  border-bottom: 2px solid gainsboro;
+  font-size: 18px;
+}
+
+/* Custom styling of Home page */
+
+#opening-text{
+  margin-top: 10px;
+  font-size: 29px;
+}
+
+/* Custom styling of a single product card */
+.product{
+  -webkit-box-shadow: 2px 6px 22px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 6px 22px 0px rgba(0,0,0,0.75);
+box-shadow: 2px 6px 22px 0px rgba(0,0,0,0.75);
 }
