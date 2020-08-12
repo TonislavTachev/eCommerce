@@ -1,5 +1,14 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+<h3>Important note</h3>
+In order to run the application effectively, the node server must be started!
+
+<h4>How to start the node server</h4>
+<code>cd into src/ then into /server</code> and run the following command <code>npm run server</code>
+
+<h4>Start both the react and node scripts in separate terminal</h4>
+
 ## Available Scripts
 
 In the project directory, you can run:
