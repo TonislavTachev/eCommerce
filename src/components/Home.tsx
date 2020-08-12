@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import '../App.css'
-import {addToBasket, getProducts} from '../actions/actions';
+import {getProducts} from '../actions/actions';
 import Products from './products/Products'
 import {Row, Container} from 'reactstrap'
 import {RootState} from '../reducers';

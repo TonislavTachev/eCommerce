@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import {useHistory} from 'react-router-dom';
-import {addToBasket} from '../actions/actions';
+import {addToProducts} from '../actions/actions';
 import {RootState} from '../reducers';
 import { Form, FormGroup, Label, Input, FormFeedback, FormText, Button, Container, Card, CardBody, Row, Col, Alert} from 'reactstrap';
 import { product } from '../types';
@@ -27,12 +27,15 @@ const Add = () => {
     })
 
     const {name, price, image} = product
-
+     
+    //saving the input values into the object
     const onText = (e: React.ChangeEvent<HTMLInputElement>) =>{
          const {name, value} = e.target;
          setProduct({...product,[name]:value});
     }
 
+
+    //adding the product to the basket
     const addToBask = () =>{
        
        const productToAdd = {
@@ -46,7 +49,7 @@ const Add = () => {
             setError("Please fill in the required fields");
             setVisible(true);
        } else {
-         dispatch(addToBasket(productToAdd));
+         dispatch(addToProducts(productToAdd));
          history.push('/');
        }
     }
@@ -55,6 +58,7 @@ const Add = () => {
 
     return (
     <Container>
+      <h4 style={{textAlign:'center', marginTop:20}}>Add a new product</h4>
        <Alert color="danger" style={{marginTop:20}} isOpen={visible} toggle={onDismiss}>
         {error}
       </Alert>

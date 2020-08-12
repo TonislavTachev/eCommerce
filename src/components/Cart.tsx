@@ -7,6 +7,8 @@ const Cart = () => {
     const productState = useSelector((state: RootState) => state.user);
     const dispatch = useDispatch();
     
+
+    //getting the cart of each user and displaying it
     useEffect(()=>{
        dispatch(getCart());
     },[])

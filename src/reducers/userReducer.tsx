@@ -14,6 +14,8 @@ const initialState:UserState = {
 }
 
 
+//the reducer with the actions
+
 export function userReducer(
     state = initialState,
     action: UserActionTypes

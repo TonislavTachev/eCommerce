@@ -2,7 +2,7 @@ import React, {useRef} from 'react'
 import {product} from '../../types'
 import {RootState} from '../../reducers'
 import {useSelector, useDispatch} from 'react-redux'
-import {addToBasket, getProducts, addToBasket2} from '../../actions/actions';
+import {getProducts, addToBasket2} from '../../actions/actions';
 import "../../App.css"
 import { Card, CardTitle, CardText, Col, CardBody, CardLink, CardSubtitle, Button} from 'reactstrap';
 const Products: React.FC<{products:product}> = ({products}) => {
@@ -17,7 +17,6 @@ const Products: React.FC<{products:product}> = ({products}) => {
             price:products.price
         }
         dispatch(addToBasket2(obj));
-        console.log(obj)
     }
     
     return (
