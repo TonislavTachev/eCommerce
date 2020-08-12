@@ -24,7 +24,7 @@ app.get('/stuff', (req,res)=>{
 
 //Used for the add product page, it adds a new product to the mock json file
 app.post('/add', (req,res)=>{
-    console.log(req.body);
+ 
     writeToFile(req.body);
 })
 
@@ -39,7 +39,7 @@ app.post('/add_to_cart', (req,res)=>{
 //this returns the user's order containing the whole price as well as the products he wishes to buy
 app.get('/cart', (req,res)=>{
     const obj = displayCart();
-    console.log(obj);
+
     res.json(obj).status(200);
 })
 
@@ -83,7 +83,6 @@ const writeToFile = (objToAdd) =>{
     dataOfJson.push(objToAdd);
 fs.writeFileSync('../data/eCommerce.json', JSON.stringify(dataOfJson, null, 4));
 
-console.log('Writing to file');
 }
 
 
