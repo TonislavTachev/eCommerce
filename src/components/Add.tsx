@@ -38,13 +38,14 @@ const Add = () => {
     //adding the product to the basket
     const addToBask = () =>{
        
+        let productPrice = parseInt(product.price);
        const productToAdd = {
            name: product.name,
-           price: product.price,
+           price: productPrice,
            image:product.image
        }
 
-       if(name === '' || price === 0 || image === ''){
+       if(name === '' || price === '' || image === ''){
            console.log('wtf');
             setError("Please fill in the required fields");
             setVisible(true);
@@ -85,7 +86,7 @@ const Add = () => {
                           <FormFeedback>Please specify an Image for the product!</FormFeedback>
     
                </FormGroup>
-         <Button block color="primary" onClick={addToBask}>Submit</Button>
+         <Button block color="danger" onClick={addToBask}>Submit</Button>
        </Form>
        </Card>
        </Col>
