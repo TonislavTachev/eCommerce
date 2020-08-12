@@ -8,7 +8,8 @@ const initialState:UserState = {
       currency:"USD",
       price:0,
       items:[],
-      payment:"Payment"
+      payment:"Payment",
+      cartNum:0
     }
 }
 

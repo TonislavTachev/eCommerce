@@ -56,7 +56,8 @@ const displayCart = () =>{
         price:Math.round(totalPrice* 100) / 100,
         currency: "USD",
         items:cart,
-        payment:"Payment"
+        payment:"Payment",
+        cartNum:cart.length
     }
     return cartObj
 }

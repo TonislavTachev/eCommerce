@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {withRouter, RouteComponentProps, Link} from 'react-router-dom';
 import {useSelector, useDispatch} from 'react-redux'
-import {getProducts} from '../actions/actions'
+import {getProducts, getCart} from '../actions/actions'
 import {RootState} from '../reducers'
 import '../App.css'
 import {
@@ -24,6 +24,10 @@ const Navigation = () => {
     const toggle = () => setIsOpen(!isOpen);
     const productState = useSelector((state: RootState) => state.user);
     const dispatch = useDispatch();
+
+    useEffect(()=>{
+       dispatch(getCart());
+    },[])
     
     return (
         <div>
@@ -46,7 +50,7 @@ const Navigation = () => {
                 <img src="https://image.flaticon.com/icons/png/512/263/263142.png" style={{height:'30px', marginTop:'5px', cursor:'pointer'}}/>
                 <div style={{height:20, width:20, background:'red', borderRadius:8, display:'flex', flexDirection:'row', justifyContent:'center', marginTop:-8,}}>
                    <div style={{marginTop:-4, color:'white'}}>
-                      {productState.numberOfItems}
+                     {productState.numberOfItems > 0 ? productState.numberOfItems : productState.cart ? productState.cart.cartNum : 0}
                    </div>
                 </div>
                 </div>

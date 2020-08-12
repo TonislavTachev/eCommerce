@@ -3,22 +3,6 @@ import {Dispatch} from 'redux';
 import axios from 'axios';
 import data_json from '../data/eCommerce.json';
 
-// export function addToBasket(newProduct: product):UserActionTypes{
-//       return{
-//           type:ADD_TO_BASKET,
-//           payload:newProduct
-//       }
-// }
-
-// export function getProducts():UserActionTypes{
-     
-//    const res = axios.get('/');
-
-//    return{
-//         type:GET_PRODUCTS,
-//         payload: JSON.parse(JSON.stringify(data_json))
-//     }
-// }
 
 export const getProducts = () => async(dispatch: Dispatch<UserActionTypes>) =>{
       try{

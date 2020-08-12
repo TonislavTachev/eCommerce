@@ -15,7 +15,8 @@ export interface cartProducts{
     price:number,
     currency:string,
     items:product[],
-    payment:string
+    payment:string,
+    cartNum:number
 }
 
 export const ADD_TO_PRODUCTS = "ADD_TO_PRODUCTS";
